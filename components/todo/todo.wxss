@@ -1,0 +1,48 @@
+/* components/todo/todo.wxss */
+.container{
+  display: flex;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.10);
+  box-sizing: border-box;
+  margin: 7.5px 15px;
+  border-radius: 5px;
+  position: relative;
+}
+
+
+.status{
+  width: 40.5px;
+  border-radius: 5px;
+}
+.status:active{
+  background: rgba(254, 154, 111, 0.4)
+}
+.status::before, .status::after{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 20.25px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: solid 1px #FE996F;
+}
+
+.status.done::after{
+  width: 4px;
+  height: 4px;
+  background: #FE996F;
+}
+
+.container .content{
+  font-size: 12px;
+  color: #333;
+  flex: 1;
+  padding: 8.5px 24.5px 8.5px 0;
+}
+
+/* .view-hover{
+  background: black;
+} */

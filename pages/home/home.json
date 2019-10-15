@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tomato-button": "../../components/button/button",
+    "tomato-clock": "../../components/clock/clock",
+    "tomato-confirm": "../../components/confirm/confirm"
+  }
+}

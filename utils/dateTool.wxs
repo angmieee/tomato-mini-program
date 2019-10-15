@@ -1,0 +1,32 @@
+var formatTime = function (date) {
+  if (typeof date === 'string') {
+    date = getDate(date)
+  }
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+  var hour = date.getHours()
+  var minute = date.getMinutes()
+  var second = date.getSeconds()
+
+  return [hour, minute].map(formatNumber).join(' : ')
+}
+
+var formatDate = function (s) {
+  if (typeof s !== 'string') {
+    return s
+  }
+  var hour = s.slice(0, 2)
+  var minute = s.slice(s.length - 2, s.length)
+  return formatNumber(hour) + '月' + formatNumber(minute) + '日'
+}
+
+function formatNumber(n) {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
+module.exports = {
+  formatTime: formatTime,
+  formatDate: formatDate
+}

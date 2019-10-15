@@ -1,0 +1,48 @@
+/* components/confirm/confirm.wxss */
+.shade {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2)
+}
+
+.confirm_box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 26rpx 20rpx 0 20rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+}
+
+textarea {
+  background: #f2f2f2;
+  border-radius: 8rpx;
+  height: 120rpx;
+  color: #737373;
+  padding: 10rpx 15rpx;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  margin: 24rpx 0;
+}
+
+.confirm_button {
+  box-sizing: border-box;
+  width: 50%;
+  border-right: 1rpx solid #F6705A;
+  text-align: center;
+  color: #F6705A;
+}
+
+.cancel_button {
+  box-sizing: border-box;
+  width: 50%;
+  border-left: 1rpx solid #F6705A;
+  text-align: center;
+}

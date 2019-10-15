@@ -1,0 +1,70 @@
+/* pages/home/home.wxss */
+
+.home {
+  background-color: #F6F6F6;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.item {
+  background-color: white;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 20rpx;
+}
+
+.item .select.finished {
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #F6705A;
+  border-radius: 50%;
+}
+
+.item .select.unfinished {
+  width: 20rpx;
+  height: 20rpx;
+  border: 1rpx solid #F6705A;
+  border-radius: 50%;
+}
+
+.item .select {
+  box-sizing: border-box;
+}
+
+.item .content {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  padding-left: 20rpx;
+}
+
+.item_wrapper {
+  padding: 20rpx;
+}
+
+.clock_background {
+  background-color: #EEF7F6;
+  border-radius: 16rpx;
+  padding: 120rpx 0 40rpx;
+}
+
+.clock_background_wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20rpx;
+}
+
+.tomato_button {
+  position: relative;
+  top: 40rpx;
+  margin: 0 auto;
+}
+
+.tomato_clock {
+  font-size: 38rpx;
+}

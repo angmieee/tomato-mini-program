@@ -1,0 +1,35 @@
+/* components/button/button.wxss */
+button::after { border: none; }
+
+.active {
+  opacity: 0.8;
+}
+
+.tomato_button {
+  height: 80rpx;
+  border-radius: 16rpx;
+  color: #fff;
+  font-size: 26rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tomato_button.normal {
+  width: 540rpx;
+}
+
+.tomato_button.mini {
+  width: 360rpx;
+}
+
+.tomato_button.default {
+  background: linear-gradient(to right, #EF9B75, #F6705A);
+  box-shadow: 0px 11px 32px 0px rgba(246,112,90,0.30);
+}
+
+.tomato_button.transparent {
+  border: 4rpx solid #F6705A;
+  box-shadow: 0px 11px 32px 0px rgba(246,112,90,0.30);
+  color: #F6705A;
+}

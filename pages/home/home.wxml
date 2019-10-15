@@ -1,0 +1,20 @@
+<!--pages/home/home.wxml-->
+<view class="home">
+  <view class="item_wrapper">
+    <scroll-view class="todolist" scroll-y="true" style="height: 550rpx;">
+      <view class="item" wx:for="{{list}}" wx:key="{{item.id}}" bindtap="changeTaskStatus" data-index="{{index}}" >
+        <view class="select {{ item.completed ? 'finished' : 'unfinished' }}"></view>
+        <view class="content">
+          <text>{{item.description}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="clock_background_wrapper">
+    <tomato-button class="tomato_button" text="创建任务" size="mini" bindtap="showConfirm"></tomato-button>
+    <view class="clock_background">
+      <tomato-clock class="tomato_clock" fontSize="38rpx" text="点击开始闹钟" bindtap="toTomato"></tomato-clock>
+    </view>
+  </view>
+  <tomato-confirm visible="{{visibleConfirm}}" placeholder="请输入内容..." bindconfirm="getTaskContent"></tomato-confirm>
+</view>

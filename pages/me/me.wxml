@@ -1,0 +1,33 @@
+<view class='container'>
+  <view class='profile'>
+    <open-data type='userAvatarUrl' class='avatar'></open-data>
+    <open-data type='userNickName' class='username'>
+      <view class='decoration'></view>
+    </open-data>
+    <view class='advice'>问题反馈</view>
+  </view>
+  <view class='tabs {{swiper.current === 0? "tomatoActive": "taskActive"}}'>
+    <view class='history tab'  bindtap='onTomatoTap'><text class='text'>番茄历史</text></view>
+    <view class='task tab' bindtap='onTaskTap'><text class='text' >我完成的任务</text></view>
+  </view>
+  <swiper class='cards' bindchange='onSwiperChange' current='{{swiper.current}}'>
+    <swiper-item class='tomato swiperItem'>
+      
+    </swiper-item>
+    <swiper-item class='item swiperItem'>
+      <view class='card' wx:for='{{todos}}' wx:key='{{i}}' wx:for-index='i' wx:for-item='day' wx:if='{{todo.length!==0}}'>
+        <wxs src="../../utils/dateTool.wxs" module="dateTool" />
+        <view class='date'><text class="content">{{dateTool.formatDate(i)}}</text></view>
+        <view class='todos'>
+          <block wx:for='{{day}}' wx:for-index='j' wx:for-item='item' wx:key='{{j}}'>
+            <view class='todo' wx:if='{{item.completed}}'>
+              <!-- <text class='time'>{{item.formatTime}}</text> -->
+              <text class='time'>{{dateTool.formatTime(item.updated_at)}}</text>
+              <text class='description' >{{item.description}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

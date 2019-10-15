@@ -1,0 +1,16 @@
+/* pages/tomato/tomato.wxss */
+.container {
+  height: 100vh;
+  padding: 0;
+  justify-content: center;
+}
+
+text {
+  color: #F6705A;
+  font-size: 26rpx;
+}
+
+.stop {
+  margin-top: 100rpx;
+  margin-bottom: 48rpx;
+}

@@ -1,0 +1,156 @@
+.container{
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  background: #F6F6F6;
+  height: 100vh;
+  padding: 0;
+}
+
+.container .profile{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: white;
+  padding: 10px;
+}
+.container .profile .username{
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(63, 63, 63);
+  position: relative;
+  margin: 5px 0 0 20px;
+  letter-spacing: 1px;
+  z-index: 0;
+}
+.container .profile .username::after{
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+  width: 110%;
+  height: 6px;
+  transform: translate(-5%);
+  background: rgba(255, 220, 207, 0.8 );
+  z-index: -1;
+}
+.container .profile .avatar{
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+}
+.container .advice{
+  font-size: 9px;
+  color: #F6705A ;
+  letter-spacing: 1px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  align-self: stretch;
+}
+
+.container .tabs{
+  display: flex;
+  justify-content: stretch;
+  padding: 10px 0;
+  margin: 10px 0;
+  background: white;
+}
+
+.container .tabs .tab{
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+}
+
+.container .tabs .tab .text{
+  position: relative;
+}
+.container .tabs{
+  position: relative;
+}
+
+/* 下面三个是tabs的指示条 */
+.container .tabs::before{
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  transform: translate(-50%);
+  height: 3px;
+  border-radius: 5px;
+  background: rgba(246, 111, 90, 0.8);
+  transition: all 0.5s;
+}
+.container .tabs.tomatoActive::before{
+  left: 25%;
+  width: 30px;
+}
+.container .tabs.taskActive::before{
+  left: 75%;
+  width: 50px;
+}
+
+
+/* swiper */
+.cards{
+  display: flex;
+  flex: 1;
+}
+.cards .swiperItem{
+  overflow: auto;
+}
+.cards .tomato{
+  width: 100%;
+}
+.cards .item{
+  width: 100%;
+}
+
+.cards .swiperItem .card{
+  background: #FFFFFF;
+  box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.10);
+  margin: 0 10px 10px 10px;
+  border-radius: 4px;
+  padding: 5px 15px;
+}
+.cards .swiperItem .card .todos .todo{
+  display: flex;
+  font-size: 12px;
+  color: #333;
+  padding: 5px 0;
+}
+.cards .swiperItem .card .todos .todo .time{
+  margin-right: 25px;
+}
+.cards .swiperItem .card .todos .todo .description{
+  flex: 1;
+}
+
+.content{
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(63, 63, 63);
+  position: relative;
+  letter-spacing: 1px; 
+  z-index: 0;
+}
+
+.content::before{
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+  width: 110%;
+  height: 6px;
+  transform: translate(-5%);
+  background: rgba(255, 220, 207, 0.8 );
+  z-index: -1;
+}

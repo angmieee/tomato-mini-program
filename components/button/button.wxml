@@ -1,0 +1,2 @@
+<!--components/button/button.wxml-->
+<button class="tomato_button {{type}} {{size}}" hover-class="active">{{text}}</button>

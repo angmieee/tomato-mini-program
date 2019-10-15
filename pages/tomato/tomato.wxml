@@ -1,0 +1,16 @@
+<!--pages/tomato/tomato.wxml-->
+<view class="container">
+  <text>距结束还有</text>
+  <t-clock class="tomato_clock" text="{{timer}}"></t-clock>
+  <view wx:if="{{!againButton}}">
+    <view class="stop">
+      <t-button size="mini" text="暂停" bindtap="clearTimer" wx:if="{{stopButton}}"></t-button>
+      <t-button size="mini" text="开始" bindtap="startTimer" wx:else></t-button>
+    </view>
+    <t-button class="abandon" size="mini" text="放弃" type="transparent" bindtap="goBack"></t-button>
+  </view>
+  <view class="again" wx:else>
+    <t-button size="mini" text="再来一组" bindtap="startAgain"></t-button>
+  </view>
+  
+</view>

@@ -1,0 +1,13 @@
+<!--pages/login/login.wxml-->
+<view class="login">
+  <view class="avatar">
+    <open-data type='userAvatarUrl'></open-data>
+  </view>
+  <view class="name-wrap">
+    <open-data type='userNickName' class="name"></open-data>
+  </view>
+  <button class="loginButton"
+        open-type="getUserInfo" 
+        bindgetuserinfo="login"
+        withCredentials="true">登录</button>
+</view>

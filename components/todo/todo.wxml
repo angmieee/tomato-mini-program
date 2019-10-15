@@ -1,0 +1,5 @@
+<!--components/todo/todo.wxml-->
+<view class='container' hover-class='view-hover'>
+  <view class='status {{finished? "done": "todo"}}' catchtap='onStatusTap'></view>
+  <view class='content' catchtap='onContentTap' data-text='{{text}}'>{{text}}</view>
+</view>
